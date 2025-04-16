@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes externas</title>
+    <style>
+        @font-face {
+            font-family: 'Sivana';
+            src: url(fonts/Sivana.otf) format('opentype'), url(fonts/Sivana.ttf) format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        /* 
+        Tipos de format()
+        - opentype (otf)
+        - truetype (ttf)
+        - embedded-opentype
+        - truetype-aat (Apple Advanced Typography)
+        - svg
+        */
+
+        /* Também misturando com o Google Fonts */
+        /* DM Serif Display */
+        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap'); 
+
+        h1 {
+            font-family: 'Sivana';
+            font-weight: 400;
+        }
+
+        p {
+            font-family: "DM Serif Display", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Título</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad veritatis asperiores odio vero veniam consequatur explicabo minima corrupti consectetur quibusdam, optio quae excepturi. Asperiores, labore. Nulla in officiis, nam delectus harum repellat quae aliquam ut veniam ex inventore reprehenderit qui quaerat incidunt? Nam, fugiat eligendi beatae quis itaque ducimus commodi doloribus dolor repellat, pariatur quo! Consectetur reprehenderit soluta veritatis laborum minus pariatur excepturi, aliquid quia culpa quo officiis sapiente! Iure omnis aperiam, alias odio incidunt eaque sint non maiores corrupti!</p>
+</body>
+</html>

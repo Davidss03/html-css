@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Mídias em HTML5</h1>
+    <h2>Imagem Dinâmica</h2>
+    <p>A imagem muda conforme o tamanho do navegador.</p>
+    <picture>
+        <source media="(max-width:750px)" srcset="img/foto-p.png" type="image/png">
+        <source media="(max-width:1050px)" srcset="img/foto-m.png" type="image/png">
+        <img src="img/foto-g.png" alt="Foto dinâmica">
+    </picture>
+
+    <h1>Reproduzindo Áudios</h1>
+    <p>Jeito mais simples: <br> (Musiquinha free)</p>
+    <audio src="media/Mas Cafe - Casa Rosa.mp3" controls loop></audio> <!-- Existe o parâmetro autoplay e loop-->
+
+    <p>Forma melhor, por existirem mais formatos: <br> (Podcast do Gunabara)</p>
+    <audio controls preload="metadata">
+        <source src="media/guanacast-33.mp3" type="audio/mpeg">
+        <source src="media/guanacast-33.ogg" type="audio/ogg">
+        <source src="media/guanacast-33.wav" type="audio/wav">
+    </audio>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de caixas</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        h1 {  /* Exemplo de box level */
+             /* display: inline; pode trocar o display */
+
+            color: white;
+            background-color: darkslategrey;
+
+        /* box-sizing */
+            width: 300px;
+            height: 300px;
+
+        /*Propriedades anatômicas do box*/
+            /* Border */
+            border-width: 10px;
+            border-style: solid;
+            border-color: darkcyan;
+            /* Shorthand
+            border: 10px solid darkcyan;*/
+
+            /* Padding */
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            /* padding: 50px 25px 5px 2px; shorthand com as 4 direções no sentido horário */
+            /* padding: 50px 25px shorthand com vertical e horizontal */
+            /* padding: 50px; ahorthand para todas direções */
+            
+            /* Outline */
+            outline-width: 8px;
+            outline-style: dashed;
+            outline-color: brown;
+            /* outline: 3px dashed brown; shorthand*/
+
+            /* Margin */
+            /* margin-top: 50px;
+            margin-right: 50px;
+            margin-bottom: 50px;
+            margin-left: 50px; */
+            /* margin: 50px; shorthand igual a do padding */
+            margin: 20px auto 40px auto; /* centralizando com shorthand (o auto centraliza o elemento nesse caso horizontalmente)*/
+        }
+
+        a {  /* Exemplo de inline-level */
+            /* display: block; pode trocar o display */
+            color: white;
+            background-color: rgb(197, 72, 13);
+
+            /* Não tem width e height por ser inline-level */
+            
+            border: 10px solid rgb(146, 79, 49);
+
+            padding: 5px 15px;
+
+            outline: 3px dashed blue;
+        }
+
+        .segundo {
+            font-size: 0.8em;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de caixa box-level: h1 </h1>
+    <h1 class="segundo">outro block-level para observar o comportamento</h1>
+    <p>Parágrafors também são exemplos de box-level, mas os <a href="#">Links são exemplos de caixas inline-level</a> dos quais a altura e largura é referente ao conteúdo.</p>
+    <a class="segundo" href="">outro inline-level para observar o comportamento</a>
+</body>
+</html>

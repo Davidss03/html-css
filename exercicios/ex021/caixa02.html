@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(155, 155, 155);
+            margin: 0px;
+        }
+        header {
+            background-color: rgb(255, 255, 255);
+            height: 120px;
+            padding: 15px;
+            margin: 10px;
+        }
+        nav {
+            background-color: rgb(97, 97, 97);
+            padding: 5px;
+            box-shadow: 2px 3px 1px rgba(0, 0, 0, 0.350);
+            /* box-shadow: inset 10px 10px 10px; */
+        }
+
+        nav > a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: white;
+        }
+
+        nav > a:hover {
+            color: greenyellow;
+            text-decoration: underline;
+        }
+
+        main {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px 10px 30px 60px;
+            border-radius: 10px 50px;
+            border-radius: 30px;
+
+        }
+
+        article {
+            background-color: rgb(209, 209, 209);
+            padding: 5px;
+        }
+
+        aside {
+            background-color: gray;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            padding: 8px;
+            text-align: center;
+            margin: 0px;
+        }
+
+        footer > p {
+            margin: 0px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Se usava assim no html4 -->
+    <!-- 
+    <div id="header">
+        <div id="section">
+            <span>
+                <p>tralalá</p>
+            </span>
+        </div>
+    </div>
+    -->
+
+    <!-- Assim no html5 -->
+    <header>
+        <h1>Meu site</h1>
+        <nav>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <p>Esportes Política e Tecnologia</p>
+        </section>
+        <section id="noticias">
+            <article>
+                <h2>Notícias sobre o Brasil</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit repudiandae nam libero eum incidunt perspiciatis.</p>
+                <aside>
+                    <p>Artigo por Jubileu da Silva Sauro</p>
+                </aside>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desenvolvido por alguém</p>
+    </footer>
+
+
+</body>
+</html>

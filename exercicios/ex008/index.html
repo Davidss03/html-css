@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outras formatações</title>
+</head>
+<body>
+    <h1>Outras formatações</h1>
+    <h2>Código-fonte / Pré-formatação</h2>
+    <!-- Atalho:
+        seleção do texto + shift + tab → retira o recuo
+        seleção do texto + tab → adiciona o recuo-->
+    <p>Com recuo maior:</p>
+    <pre>
+        <code> 
+            num = int(input('Digite um número'))
+            if num % 2 == 0:
+            print(f'O número {num} é PAR')
+            else:
+            print(f'O número {num} é ÍMPAR')
+            print('Fim do programa')
+        </code>
+    </pre>
+
+    <!-- A tag <pre> considera todos os espaços dentro dela-->
+    <p>Sem recuo:</p>
+    <pre>
+num = int(input('Digite um número'))
+if num % 2 == 0:
+print(f'O número {num} é PAR')
+else:
+print(f'O número {num} é ÍMPAR')
+print('Fim do programa')
+    </pre>
+
+    <hr>
+
+    <h2>Citações simples</h2>
+    <p>Citação simples:</p>
+    <q>Uma grande citação</q>
+    <p>Citação em bloco:</p>
+    <blockquote cite="https://www.pensador.com/frases_gandalf/#:~:text=Tudo%20o%20que,Gandalf">Tudo o que temos de decidir é o que fazer com o tempo que nos é dado. - Gandalf</blockquote>
+
+    <hr>
+
+    <h2>Abreviações</h2>
+    <p>Estou estudando <abbr title="Hyper Text Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr></p>
+
+    <hr>
+    
+    <h2>Texto invertido</h2>
+    <bdo dir="rtl">“Um mago nunca se atrasa, nem se adianta, ele chega exatamente quando pretende chegar.” Gandalf, o Cinzento.</bdo>
+</body>
+</html>
