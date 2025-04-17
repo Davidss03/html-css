@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio do Astronauta</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        /* Sem a shorthand */
+            /* background-image: url(images/espaco.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover; */
+        
+        /* Shorthand - background 
+        color , image , position , repeat, [size] , attachment  */
+       
+        #container {
+            height: 100vh;
+            position: relative; /* Padrão */
+            background: url(images/espaco.jpg) center center no-repeat fixed;
+            background-size: cover;
+        }
+
+        #astronauta {
+            width: 380px;
+            height: 388px;
+
+            position: absolute; /* Para posicionar no centro do container relative */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+            background-image: url(images/astronauta.png);
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <section id="container">
+        <div id="astronauta"></div>
+    </section>
+</body>
+</html>
