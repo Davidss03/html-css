@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas Grandes</title>
+</head>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    table {
+        width: 600px;
+        border-collapse: collapse;
+
+        /* Para fazer um header sticky*/
+        position: relative;
+    }
+    thead > tr > th {
+        /* Continuação para fazer um header sticky*/
+        /* O header some junto do fim da tabela quando rolar o suficiente a página */
+        position: sticky;
+        top: -1px;
+        background-color: rgb(65, 65, 65);
+    }
+
+    caption {
+        font-size: 1.3em;
+        font-weight: bold;
+        padding: 10px;
+    }
+
+    thead , tfoot {
+        background-color: rgb(65, 65, 65);
+        color: white;
+    }
+
+    /* 
+    Para criar o efeito zebrado
+        usa a pseudo-classe nth-child com:
+            - pode ser (2n) e (2n-1)
+            - ou (odd) e (even)
+    */
+    tbody > tr:nth-child(odd) { /* 2n-1 */
+        background-color: white;
+    }
+    tbody > tr:nth-child(even) { /* 2n */
+        background-color: lightgray;
+    }
+    
+    td, th {
+        padding: 10px;
+        border: 1px solid black;
+    }
+
+    td.position {
+        text-align: right;
+    }
+
+    td.num {
+        text-align: right;
+    }
+</style>
+<body>
+    <h1>Uso de Tabelas Grandes</h1>
+    <!-- 
+        Anatomia para tabelas grandes
+        TABLE
+            CAPTION
+            THEAD (opcional)
+                tr td th
+            TBODY
+                tr td th
+            TFOOT (opcional)
+                tr td th
+    -->
+    <table>
+        <caption>Unidades federativas do Brasil por população
+        </caption>
+        <thead>
+            <tr>
+                <th scope="col" style="width: 30px;"></th>
+                <th scope="col">Unidade federativa</th>
+                <th scope="col" style="width: 80px;">População</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td class="position">1</td>
+                <td>São Paulo</td>
+                <td class="num">45 973 194</td>
+            </tr>
+            <tr>
+                <td class="position">2</td>
+                <td>Minas Gerais</td>
+                <td class="num">21 322 691</td>
+            </tr>
+            <tr>
+                <td class="position">3</td>
+                <td>Rio de Janeiro</td>
+                <td class="num">17 219 679</td>
+            </tr>
+            <tr>
+                <td class="position">4</td>
+                <td>Bahia</td>
+                <td class="num">14 850 513</td>
+            </tr>
+            <tr>
+                <td class="position">5</td>
+                <td>Paraná</td>
+                <td class="num">11 824 665</td>
+            </tr>
+            <tr>
+                <td class="position">6</td>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11 229 915</td>
+            </tr>
+            <tr>
+                <td class="position">7</td>
+                <td>Pernambuco</td>
+                <td class="num">9 539 029</td>
+            </tr>
+            <tr>
+                <td class="position">8</td>
+                <td>Ceará</td>
+                <td class="num">9 233 656</td>
+            </tr>
+            <tr>
+                <td class="position">9</td>
+                <td>Pará</td>
+                <td class="num">8 664 306</td>
+            </tr>
+            <tr>
+                <td class="position">10</td>
+                <td>Santa Catarina</td>
+                <td class="num">8 058 441</td>
+            </tr>
+            <tr>
+                <td class="position">11</td>
+                <td>Goiás</td>
+                <td class="num">7 350 483</td>
+            </tr>
+            <tr>
+                <td class="position">12</td>
+                <td>Maranhão</td>
+                <td class="num">7 010 960</td>
+            </tr>
+            <tr>
+                <td class="position">13</td>
+                <td>Amazonas</td>
+                <td class="num">4 281 209</td>
+            </tr>
+            <tr>
+                <td class="position">14</td>
+                <td>Paraíba</td>
+                <td class="num">4 145 040</td>
+            </tr>
+            <tr>
+                <td class="position">15</td>
+                <td>Espírito Santo</td>
+                <td class="num">4 102 129</td>
+            </tr>
+            <tr>
+                <td class="position">16</td>
+                <td>Mato Grosso</td>
+                <td class="num">3 836 399</td>
+            </tr>
+            <tr>
+                <td class="position">17</td>
+                <td>Rio Grande do Norte</td>
+                <td class="num">3 446 071</td>
+            </tr>
+            <tr>
+                <td class="position">18</td>
+                <td>Piauí</td>
+                <td class="num">3 375 646</td>
+            </tr>
+            <tr>
+                <td class="position">19</td>
+                <td>Alagoas</td>
+                <td class="num">3 220 104</td>
+            </tr>
+            <tr>
+                <td class="position">20</td>
+                <td>Distrito Federal</td>
+                <td class="num">2 982 818</td>
+            </tr>
+            <tr>
+                <td class="position">21</td>
+                <td>Mato Grosso do Sul</td>
+                <td class="num">2 901 895</td>
+            </tr>
+            <tr>
+                <td class="position">22</td>
+                <td>Sergipe</td>
+                <td class="num">2 291 077</td>
+            </tr>
+            <tr>
+                <td class="position">23</td>
+                <td>Rondônia</td>
+                <td class="num">1 746 227</td>
+            </tr>
+            <tr>
+                <td class="position">24</td>
+                <td>Tocantins</td>
+                <td class="num">1 577 342</td>
+            </tr>
+            <tr>
+                <td class="position">25</td>
+                <td>Acre</td>
+                <td class="num">880 631</td>
+            </tr>
+            <tr>
+                <td class="position">26</td>
+                <td>Amapá</td>
+                <td class="num">802 837</td>
+            </tr>
+            <tr>
+                <td class="position">27</td>
+                <td>Roraima</td>
+                <td class="num">716 793</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <td></td>
+            <th scope="row">Total de Habitantes</th>
+            <td class="num"><strong>212 583 750</strong></td>
+        </tfoot>
+    </table>
+
+    <h2>Texto para testar o header sticky da tabela</h2>
+    <p>
+        Mió que ocê já viu, sô! Essa página aqui é mais bunita que filhote de capivara tomando sol na beira do rio. Se os maias tivessem visto isso, tinham largado aquele calendário doido e botado um 'curtir' gigante. É tanta beleza que até a sogra ia achar simpático, e olha que ela reclama até de Wi-Fi grátis!
+    </p>
+    <p>
+        Aqui, a cascavel pia e o saci tem duas pernas (uma de cada vez, pra não cair). As onças miam e os tucanos cantam sertanejo universitário. É um festival de 'uai' e de 'trem bão' que não acaba mais. Se você não se impressionar com essa página, é porque comeu pão de queijo dormido ou tomou garapa choca.
+
+    </p>
+    <p>
+        E não para por aí, não! Essa página tem mais recursos que político em campanha. Tem botão que faz 'muuu', imagem que pisca mais que vaga-lume em noite de São João, e texto que filosofa mais que bêbado na mesa do bar. Se você clicar muito, capaz de aparecer um disco voador cheio de ETs mineiros oferecendo broa de milho.
+
+    </p>
+    <p>
+        Os designers piram, os programadores choram de emoção, e os usuários... ah, os usuários ficam mais felizes que pinto no lixo! Dizem que quem lê essa página todo dia ganha na loteria e encontra a tampa perdida do pote de margarina. É quase milagre!
+
+    </p>
+    <p>
+        Mas óia, não se avexe não! Pode copiar e colar esse texto à vontade. Ele foi feito com carinho, com farinha de mandioca e muita imaginação. Se alguém perguntar o que significa, diga que é a 'essência da internet em estado bruto', ou então inventa qualquer coisa, ninguém vai ligar mesmo.
+
+    </p>
+    <p>
+        E pra finalizar essa prosa, digo que essa página é que nem causa ganha: pode vir a Nasa, o FBI, e até a turma da Mônica, que não vão achar nada de errado. É tudo feito nas coxas, mas com um toque de genialidade caipira que só a gente tem.
+
+    </p>
+    <p>
+        Então, bamo nessa! Encha seu HTML com essa belezura e prepare-se para os elogios. Se alguém reclamar, manda vir pra Pirassununga pra tomar um café com bolo de fubá e ver se melhora do mau humor. E se não melhorar, a gente solta uns 'causos' de pescador pra ver se espanta o zoião.
+
+    </p>
+    <p>
+        Mió que ocê já viu, sô! Essa página aqui é mais bunita que filhote de capivara tomando sol na beira do rio. Se os maias tivessem visto isso, tinham largado aquele calendário doido e botado um 'curtir' gigante. É tanta beleza que até a sogra ia achar simpático, e olha que ela reclama até de Wi-Fi grátis! E não é só isso não, viu? Essa beleza toda é de dar inveja até no pavão mais faceiro da roça. Se bobear, até a lua vai querer se espelhar nessa página pra ver se tá mais charmosa.
+    </p>
+
+    <p>
+        Aqui, a cascavel pia e o saci tem duas pernas (uma de cada vez, pra não cair). As onças miam e os tucanos cantam sertanejo universitário. É um festival de 'uai' e de 'trem bão' que não acaba mais. Se você não se impressionar com essa página, é porque comeu pão de queijo dormido ou tomou garapa choca. E olha que essa garapa devia tá mais azeda que limão chupado debaixo de chuva! Até o curupira ia sair correndo dessa confusão de bicho falando.
+    </p>
+
+    <p>
+        E não para por aí, não! Essa página tem mais recursos que político em campanha. Tem botão que faz 'muuu', imagem que pisca mais que vaga-lume em noite de São João, e texto que filosofa mais que bêbado na mesa do bar. Se você clicar muito, capaz de aparecer um disco voador cheio de ETs mineiros oferecendo broa de milho. E se eles oferecerem café, aceite! Dizem que o café de ET mineiro tem um quê de mágica que faz a gente entender até bula de remédio.
+    </p>
+
+    <p>
+        Os designers piram, os programadores choram de emoção, e os usuários... ah, os usuários ficam mais felizes que pinto no lixo! Dizem que quem lê essa página todo dia ganha na loteria e encontra a tampa perdida do pote de margarina. É quase milagre! E tem mais: quem compartilha essa página com os amigos, dizem que nunca mais perde a chave de casa e sempre acha vaga no estacionamento. É bênção que não acaba mais!
+    </p>
+
+    <p>
+        Mas óia, não se avexe não! Pode copiar e colar esse texto à vontade. Ele foi feito com carinho, com farinha de mandioca e muita imaginação. Se alguém perguntar o que significa, diga que é a 'essência da internet em estado bruto', ou então inventa qualquer coisa, ninguém vai ligar mesmo. E se perguntarem quem escreveu, pode dizer que foi um sujeito meio doido de Pirassununga que adora inventar moda.
+    </p>
+
+    <p>
+        E pra finalizar essa prosa, digo que essa página é que nem causa ganha: pode vir a Nasa, o FBI, e até a turma da Mônica, que não vão achar nada de errado. É tudo feito nas coxas, mas com um toque de genialidade caipira que só a gente tem. E se eles insistirem em procurar defeito, a gente oferece um copo de caldo de cana e uns biscoitos de polvilho pra ver se amansam.
+    </p>
+
+    <p>
+        Então, bamo nessa! Encha seu HTML com essa belezura e prepare-se para os elogios. Se alguém reclamar, manda vir pra Pirassununga pra tomar um café com bolo de fubá e ver se melhora do mau humor. E se não melhorar, a gente solta uns 'causos' de pescador pra ver se espanta o zoião. E se nem isso funcionar, a gente apela pra viola e umas moda de raiz pra ver se a alma se acalma.
+    </p>
+
+    <p>
+        É isso, sô! Espero que esse 'lorem ipsum' turbinado com humor te ajude no seu exercício de HTML. E se precisar de mais 'causos', é só chamar! E se a página ainda estiver pequena, não se preocupe, a gente inventa mais umas lorotas rapidinho, que nem boato em cidade pequena!
+    </p>
+</body>
+</html>
