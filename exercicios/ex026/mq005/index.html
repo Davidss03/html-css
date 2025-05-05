@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/media-query.css">
+</head>
+<body onresize="mudouTamanho()">
+    <header>
+        <h1>Meu site</h1>
+        <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
+        <menu id="itens">
+            <ul>
+                <li><a href="#">Opção A</a></li>
+                <li><a href="#">Opção B</a></li>
+                <li><a href="#">Opção C</a></li>
+                <li><a href="#">Opção D</a></li>
+                <li><a href="#">Opção E</a></li>
+            </ul>
+        </menu>
+    </header>
+    <main>
+        <article>
+            <h2>Testando Media Queries</h2>
+            <!-- Páragrafos com lorem -->
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error earum cum non consequuntur laudantium ex exercitationem autem enim ipsam iure corporis aliquam, velit voluptas id ratione corrupti temporibus debitis suscipit harum minima! Distinctio, qui doloremque.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita recusandae nesciunt veniam eius, architecto ipsam fugiat fugit facilis inventore, ipsa ex. Ipsum commodi tenetur soluta, culpa accusantium adipisci ratione aliquam reprehenderit rerum et voluptates unde quod delectus beatae eveniet, autem architecto, consectetur perferendis ex. Esse illo reprehenderit at voluptatum hic, nam repudiandae mollitia molestias aspernatur, quae veniam ipsa enim adipisci provident laboriosam voluptatem ad libero eum! Inventore suscipit, possimus, quis vitae ratione consequuntur rem consequatur quibusdam, praesentium voluptate officia quaerat.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis cupiditate quidem eligendi similique voluptas quos quisquam ipsum laboriosam mollitia officiis voluptate possimus, doloribus numquam sunt id natus labore ullam! Vel, expedita. Consequuntur dolorum recusandae eius beatae dolor voluptatum facilis tenetur minima, omnis obcaecati, ipsa, eveniet vitae aspernatur suscipit repellendus amet.
+            </p>
+        </article>
+    </main>
+
+    <script>
+        function clickMenu() {
+            if (itens.style.display == 'block') {
+                itens.style.display = 'none'   
+            } else {
+                itens.style.display = 'block'
+            }
+        }
+
+        function mudouTamanho() {
+            if (window.innerWidth >= 768) {
+                itens.style.display = 'block'
+            } else {
+                itens.style.display = 'none'
+            }
+        }
+    </script>
+</body>
+</html>
