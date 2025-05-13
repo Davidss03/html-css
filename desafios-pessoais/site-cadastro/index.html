@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/media-query.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+    <title>Cadastro</title>
+</head>
+<body onresize="mudouTamanho()">
+    <header>
+        <h1>Site</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </header>
+    <span id="burger" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
+    <menu id="menu">
+        <ul>
+            <li class="iten"><a href="#">Home</a></li>
+            <li class="iten"><a href="#">Loja</a></li>
+            <li class="iten"><a href="#">Termos de Uso</a></li>
+            <li class="iten"><a href="#">Sobre Nós</a></li>
+            <li class="iten"><a href="#">Redes Sociais</a></li>
+        </ul>
+    </menu>
+    <main>
+        <section id="login">
+            <section id="image">
+            </section>
+            <section id="form">
+                <div>
+                    <h1>Cadastro</h1>
+                    <p>Seja bem-vindo(a). Crie a sua conta para começar</p>
+                </div>
+                <div class="field">
+                    <label for="inome">Nome completo</label>
+                    <input type="text" name="nome" id="inome" placeholder="seu nome">
+                </div>
+                <div class="field">
+                    <label for="iemail">E-mail</label>
+                    <input type="email" name="email" id="iemail" placeholder="seu e-mail">
+                </div>
+                <div class="field">
+                    <label for="isenha">Senha</label>
+                    <input type="password" name="senha" id="isenha" placeholder="sua senha">
+                </div>
+                <div >
+                    <label for="isenhaconfirmar">Confirmar senha</label>
+                    <input type="password" name="confsenha" id="iconfsenha" placeholder="confirme a sua senha">
+                </div>
+                <div>
+                    <label for="itermos">Aceitar <a href="#">Termos e Condições</a></label>
+                    <input type="checkbox" name="termos" id="itermos">
+                </div>
+                <div class="botao">
+                    <input type="submit" value="Cadastrar" id="btn">
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <script>
+        function clickMenu() {
+            if (menu.style.display == 'block') {
+                menu.style.display = 'none'
+            } else {
+                menu.style.display = 'block'
+            }
+        }
+
+        function mudouTamanho() {
+            if (window.innerWidth >= 768) {
+                menu.style.display = 'block'
+            } else {
+                menu.style.display = 'none'
+            }
+        }
+    </script>
+</body>
+</html>

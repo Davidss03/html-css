@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+/* Media Queries */
+
+:root {
+    --main: #486966;
+    --mainBright:#889C9B;
+    --mainBrighter: #B2BEBF;
+    --dark: #3B3936;
+    --accent: #BD2A2E;
+}
+
+@media screen and (min-width: 768px) {
+    span#burger {
+        display: none;
+    }
+
+    menu {
+        display: block;
+        height: 50px;
+        font-size: 1.3em;
+    }
+
+    menu > ul > li {
+        height: 100%;
+        display: inline-block;
+        padding: 11px;
+    }
+
+    menu > ul > li:hover {
+        background-color: var(--mainBright);
+        cursor: pointer;
+    }
+     menu > ul > li:focus {
+        background-color: var(--main)
+     }
+
+
+    section#login {
+        width: 90vw;
+    }
+    
+    section#image {
+        width: 50%;
+        height: 50vh;
+        float: right;
+    }
+
+    section#form {
+        width: 50%;
+        height: 50vh;
+        float: left;
+    }
+}
