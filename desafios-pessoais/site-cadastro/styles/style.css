@@ -65,7 +65,7 @@ section#login {
     overflow: hidden;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
     margin: auto;
-    margin-top: 80px;
+    margin-top: 30px;
 
 
     /* position: absolute;
@@ -78,7 +78,7 @@ section#login {
 
 section#image {
     width: 100%;
-    height: 30vh;
+    height: 300px;
     background: var(--main) url(../images/pandu-ior-ZO6PQJ_Kljo-unsplash.jpg) center center no-repeat;
     background-position: cover;
 
@@ -86,7 +86,7 @@ section#image {
 
 section#form {
     width: 100%;
-    height: 30vh;
+    height: 350px;
     padding: 20px;
     margin: auto;
 }
@@ -100,13 +100,12 @@ section#form > div > p {
     margin-bottom: 25px;
 }
 
-section#form > div {
-    margin: 15px 0;
+section#form > div input {
+    
 }
 
-section#form > div.botao {
-    width: 100%;
-    background-color: red;
+section#form > input[type=submit] {
+
 }
 
 #form .field label {
